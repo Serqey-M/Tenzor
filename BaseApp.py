@@ -19,12 +19,11 @@ class BasePage:
         else:
             element_name = locator
         try:
-            element = WebDriverWait(self.driver, time).until(
-                EC.presence_of_element_located(locator),
+            element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
                 message=f"Не удается найти элемент {element_name}",
             )
         except:
-            logging.info(f"Элемент {element_name} не найден")
+            logging.exception(f"Элемент {element_name} не найден")
             element = None
         return element
 
@@ -50,7 +49,7 @@ class BasePage:
     def get_alert_text(self):
         try:
             alert = self.driver.switch_to.alert
-            logging.exception(f"Получаем предупреждение(alert) {alert.text}")
+            logging.info(f"Получаем предупреждение(alert) {alert.text}")
             return alert.text
         except:
             logging.exception("Ошибка при чтении предупреждения(alert)")
@@ -103,8 +102,8 @@ class BasePage:
             logging.exception(f"Элемент {element_name} не найден")
             return None
         try:
-            text = field.text()
-            logging.exception(f"Текст элемента {element_name} {text}")
+            text = field.text
+            logging.info(f"Текст элемента {element_name} {text}")
         except:
             logging.exception(f'Ошибка при получении текста из элемента {element_name}')
             return None

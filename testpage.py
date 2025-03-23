@@ -41,13 +41,11 @@ class OperationsHelper(BasePage):
         )
 
     def click_block_strength_in_people_detailed(self):
-        self.find_element(
+        self.click_button(
             Locators.ids["LOCATOR_BLOCK_STRENGTH_IN_PEOPLE_DETAILED"],
-            description = "ссылка 'подроднее' в блоке 'Сила в людях'",
-        )
+            description="ссылка 'подроднее' в блоке 'Сила в людях'")
 
     # получить
-    # def get_name_block_strength_in_people(self):
-    #     return self.find_element(
-    #         Locators.ids["LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE"], description='zzz'
-    #     ).text
+    def get_name_block_strength_in_people(self):
+        return self.get_text_from_element(Locators.ids["LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE"],
+            description='Название блока "Сила в людях"')
