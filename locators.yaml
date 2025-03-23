@@ -1,0 +1,12 @@
+XPATH:
+  LOCATOR_LINK_CONTACTS: //*[@id="wasaby-content"]/div/div/div/div[2]/div[1]/div[1]/div[1]/div[2]/ul/li[2]/div
+  LOCATOR_OFFICES_IN_REGION: //*[@id="wasaby-content"]/div/div/div/div[2]/div[1]/div[1]/div[1]/div[2]/ul/li[2]/div/div[2]/a[2]
+  LOCATOR_BANNER_TENZOR: //*[@id="contacts_clients"]/div[1]/div/div/div[2]/div/a
+  LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE: //*[@id="container"]/div[1]/div/div[6]/div/div[1]/div
+  # LOCATOR_BLOCK_STRENGTH_IN_PEOPLE_DETAILED: //*[@id="container"]/div[1]/div/div[5]/div/div/div[1]/div/p[4]/a
+  LOCATOR_:
+  LOCATOR_:
+  LOCATOR_:
+  LOCATOR_:
+CSS_SELECTOR:
+  LOCATOR_BLOCK_STRENGTH_IN_PEOPLE_DETAILED: '#container > div.tensor_ru-content_wrapper > div > div.tensor_ru-Index__block4-bg > div > div > div:nth-child(1) > div > p:nth-child(4) > a'
