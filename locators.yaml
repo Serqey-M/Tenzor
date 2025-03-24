@@ -4,9 +4,12 @@ XPATH:
   LOCATOR_BANNER_TENZOR: //*[@id="contacts_clients"]/div[1]/div/div/div[2]/div/a
   LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE: //*[@id="container"]/div[1]/div/div[5]/div/div/div[1]/div/p[1]
   LOCATOR_BLOCK_STRENGTH_IN_PEOPLE_DETAILED: //*[@id="container"]/div[1]/div/div[5]/div/div/div[1]/div/p[4]/a
-  LOCATOR_:
-  LOCATOR_:
-  LOCATOR_:
-  LOCATOR_:
+  LOCATOR_IMG1: //*[@id="container"]/div[1]/div/div[4]/div[2]/div[1]/a/div[1]/img
+  LOCATOR_IMG2: //*[@id="container"]/div[1]/div/div[4]/div[2]/div[2]/a/div[1]/img
+  LOCATOR_IMG3: //*[@id="container"]/div[1]/div/div[4]/div[2]/div[3]/a/div[1]/img
+  LOCATOR_IMG4: //*[@id="container"]/div[1]/div/div[4]/div[2]/div[4]/a/div[1]/img
+  LOCATOR_REGION: //*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]
+  LOCATOR_LIST_OF_PARTNERS: //*[@id="contacts_list"]/div/div[2]/div[2]/div/div[2]/div[1]/div[3]
+  LOCATOR_KAMCHATKA: //*[@id="popup"]/div[2]/div/div/div/div/div[2]/div/ul/li[43]/span
 CSS_SELECTOR:
   LOCATOR_: 

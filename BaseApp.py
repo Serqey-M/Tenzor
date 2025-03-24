@@ -27,6 +27,23 @@ class BasePage:
             element = None
         return element
 
+        # Поиск элемента
+
+    def find_elements(self, locator, time=10, description=None):
+        if description:
+            element_name = description
+        else:
+            element_name = locator
+        try:
+            element = WebDriverWait(self.driver, time).until(
+                EC.presence_of_all_elements_located(locator),
+                message=f"Не удается найти элементы в {element_name}",
+            )
+        except:
+            logging.exception(f"Элементы в {element_name} не найден")
+            element = None
+        return element
+
     # Получаем свойство элемента
     def get_element_property(self, locator, el_property):
         element = self.find_element(locator)
@@ -37,13 +54,23 @@ class BasePage:
             return None
 
     # Переход по указанному url
-    def go_to_site(self):
+    def go_to_site(self, base_url = testdata["address"]):
         try:
-            start_browsing = self.driver.get(self.base_url)   
+            start_browsing = self.driver.get(base_url)   
         except:
             logging.exception("Ошибка при открытии сайта")
             start_browsing = None
         return start_browsing
+
+    # Переход по вкладкам
+    def go_to_tab(self, tad):
+        try:
+            self.driver.switch_to.window(self.driver.window_handles[tad])
+            logging.info("Переход на вкладку")
+        except:
+            logging.exception("Ошибка при переходе на вкладку")
+            return False
+        return True
 
     # Получаем текст предупреждения(alert)
     def get_alert_text(self):

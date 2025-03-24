@@ -45,7 +45,42 @@ class OperationsHelper(BasePage):
             Locators.ids["LOCATOR_BLOCK_STRENGTH_IN_PEOPLE_DETAILED"],
             description="ссылка 'подроднее' в блоке 'Сила в людях'")
 
+    def click_name_region(self):
+        self.click_button(Locators.ids['LOCATOR_REGION'])
+
+    def click_Kamchatka(self):
+        self.click_button(Locators.ids["LOCATOR_KAMCHATKA"])
+
     # получить
     def get_name_block_strength_in_people(self):
-        return self.get_text_from_element(Locators.ids["LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE"],
-            description='Название блока "Сила в людях"')
+        return self.get_text_from_element(Locators.ids["LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE"])
+
+    def get_height_img1(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG1"], 'height')
+
+    def get_width_img1(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG1"], "width")
+
+    def get_height_img2(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG2"], "height")
+
+    def get_width_img2(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG2"], "width")
+
+    def get_height_img3(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG3"], "height")
+
+    def get_width_img3(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG3"], "width")
+
+    def get_height_img4(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG4"], "height")
+
+    def get_width_img4(self):
+        return self.get_element_property(Locators.ids["LOCATOR_IMG4"], "width")
+
+    def get_name_region(self):
+        return self.get_text_from_element(Locators.ids["LOCATOR_REGION"])
+
+    def get_list_of_partners(self):
+        return self.find_elements(Locators.ids['LOCATOR_LIST_OF_PARTNERS'])
