@@ -3,7 +3,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import yaml
 
-with open("D:\Tensor\\testdata.yaml") as f:
+with open("testdata.yaml") as f:
     testdata = yaml.safe_load(f)
 
 
@@ -12,8 +12,18 @@ class BasePage:
         self.driver = driver
         self.base_url = testdata['address']
 
+    # Переход по указанному url
+    def go_to_site(self, url = testdata["address"]):
+        try:
+            start_browsing = self.driver.get(url) 
+            logging.info(f"Открытие страницы {url}")
+        except:
+            logging.exception(f"Ошибка при открытии страницы {url}")
+            start_browsing = None
+        return start_browsing
+
     # Поиск элемента
-    def find_element(self, locator, time=10, description=None):
+    def find_element(self, locator, time=testdata["implicitly_wait"], description=None):
         if description:
             element_name = description
         else:
@@ -22,14 +32,14 @@ class BasePage:
             element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
                 message=f"Не удается найти элемент {element_name}",
             )
+            logging.info(f"Элемент {element_name} найден")
         except:
             logging.exception(f"Элемент {element_name} не найден")
             element = None
         return element
 
-        # Поиск элемента
-
-    def find_elements(self, locator, time=10, description=None):
+    # Поиск нескольких элементов
+    def find_elements(self, locator, time=testdata["implicitly_wait"], description=None):
         if description:
             element_name = description
         else:
@@ -39,65 +49,39 @@ class BasePage:
                 EC.presence_of_all_elements_located(locator),
                 message=f"Не удается найти элементы в {element_name}",
             )
+            logging.info(f"Элементы в {element_name} найдены")
         except:
             logging.exception(f"Элементы в {element_name} не найден")
             element = None
         return element
 
     # Получаем свойство элемента
-    def get_element_property(self, locator, el_property):
-        element = self.find_element(locator)
-        if element:
-            return element.value_of_css_property(el_property)
-        else:
-            logging.error(f'Свойство {property} не найдено в элементе с локатором {locator}')
-            return None
-
-    # Переход по указанному url
-    def go_to_site(self, base_url = testdata["address"]):
-        try:
-            start_browsing = self.driver.get(base_url)   
-        except:
-            logging.exception("Ошибка при открытии сайта")
-            start_browsing = None
-        return start_browsing
-
-    # Переход по вкладкам
-    def go_to_tab(self, tad):
-        try:
-            self.driver.switch_to.window(self.driver.window_handles[tad])
-            logging.info("Переход на вкладку")
-        except:
-            logging.exception("Ошибка при переходе на вкладку")
-            return False
-        return True
-
-    # Получаем текст предупреждения(alert)
-    def get_alert_text(self):
-        try:
-            alert = self.driver.switch_to.alert
-            logging.info(f"Получаем предупреждение(alert) {alert.text}")
-            return alert.text
-        except:
-            logging.exception("Ошибка при чтении предупреждения(alert)")
-            return None
-
-    # Ввод текста в поле
-    def enter_text_into_field(self, locator, word, description = None):
+    def get_element_property(self, locator, property, description=None):
         if description:
             element_name = description
         else:
             element_name = locator
-        logging.debug(f'Вводим {word} в элемент {element_name}')
-        field = self.find_element(locator)
-        if not field:
-            logging.error(f"Элемент {element_name} не найдей")
-            return False
         try:
-            field.clear()
-            field.send_keys(word)
+            element = self.find_element(locator)
+            logging.info(
+                f"Свойство {property} у элемента {element_name} равно {element.value_of_css_property(property)}"
+            )
         except:
-            logging.exception(f"Ошибка при вводе текста в {element_name}")
+            logging.exception(f"Свойство {property} у элемента {element_name} не найдено")
+            return None
+        return element.value_of_css_property(property)
+
+    # Переход по вкладкам
+    def go_to_tab(self, tab, description=None):
+        if description:
+            element_name = description
+        else:
+            element_name = tab
+        try:
+            self.driver.switch_to.window(self.driver.window_handles[tab])
+            logging.info(f"Переход на вкладку {element_name}")
+        except:
+            logging.exception(f"Ошибка при переходе на вкладку {element_name}")
             return False
         return True
 
@@ -109,13 +93,14 @@ class BasePage:
             element_name = locator
         button = self.find_element(locator)
         if not button:
+            logging.exception(f"Кнопка {element_name} не найдена")
             return False
         try:
             button.click()
+            logging.info(f"Клик по кнопке {element_name}")
         except:
-            logging.exception('Ошибка при клике по кнопке')
+            logging.exception(f'Ошибка при клике по кнопке {element_name}')
             return False
-        logging.debug(f'Клик по кнопке {element_name}')
         return True
 
     # Получение текста из элемента
@@ -124,15 +109,24 @@ class BasePage:
             element_name = description
         else:
             element_name = locator
-        field = self.find_element(locator, time=3)
+        field = self.find_element(locator, time=testdata["implicitly_wait"])
         if not field:
             logging.exception(f"Элемент {element_name} не найден")
             return None
         try:
             text = field.text
-            logging.info(f"Текст элемента {element_name} {text}")
+            logging.info(f"Получаем текст {text} из элемента {element_name}")
         except:
             logging.exception(f'Ошибка при получении текста из элемента {element_name}')
             return None
-        logging.debug(f'Получаем текст {text} из элемента {element_name}')
         return text
+
+    # Получение текущего url
+    def get_url(self):
+        try:
+            current_url = self.driver.current_url
+            logging.info(f"Получен url страницы {current_url}")
+        except:
+            logging.exception("Ошибка при получении url страницы")
+            current_url = None
+        return current_url

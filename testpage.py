@@ -6,12 +6,12 @@ import yaml
 # Поиск локаторов
 class Locators:
     ids = dict()
-    with open("D:\Tensor\locators.yaml") as f:
+    with open("locators.yaml") as f:
         locators = yaml.safe_load(f)
     for locator in locators['XPATH'].keys():
         ids[locator] = (By.XPATH, locators['XPATH'][locator])
-    for locator in locators['CSS_SELECTOR'].keys():
-        ids[locator] = (By.CSS_SELECTOR, locators['CSS_SELECTOR'][locator])
+    for locator in locators["CLASS_NAME"].keys():
+        ids[locator] = (By.CLASS_NAME, locators["CLASS_NAME"][locator])
 
 
 class OperationsHelper(BasePage):
@@ -49,7 +49,7 @@ class OperationsHelper(BasePage):
         self.click_button(Locators.ids['LOCATOR_REGION'])
 
     def click_Kamchatka(self):
-        self.click_button(Locators.ids["LOCATOR_KAMCHATKA"])
+        self.click_button(Locators.ids["LOCATOR_KAMCHATKA"], description='Камчатка')
 
     # получить
     def get_name_block_strength_in_people(self):
@@ -83,4 +83,4 @@ class OperationsHelper(BasePage):
         return self.get_text_from_element(Locators.ids["LOCATOR_REGION"])
 
     def get_list_of_partners(self):
-        return self.find_elements(Locators.ids['LOCATOR_LIST_OF_PARTNERS'])
+        return self.find_element(Locators.ids['LOCATOR_LIST_OF_PARTNERS'])

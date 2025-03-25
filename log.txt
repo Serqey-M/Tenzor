@@ -1,3 +1,78 @@
-= 2025-03-25 01:31:12 INFO Сценарий 2 запущен
-= 2025-03-25 01:31:16 INFO Текст элемента ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]') Нижегородская обл.
-= 2025-03-25 01:31:16 INFO Текст элемента ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]') Нижегородская обл.
+= 2025-03-26 01:33:46 INFO Сценарий 2 запущен
+= 2025-03-26 01:33:48 INFO Открытие страницы https://sbis.ru/
+= 2025-03-26 01:33:48 INFO Элемент ('xpath', '//*[@id="wasaby-content"]/div/div/div/div[2]/div[1]/div[1]/div[1]/div[2]/ul/li[2]/div') найден
+= 2025-03-26 01:33:48 INFO Клик по кнопке ссылка контакты
+= 2025-03-26 01:33:48 INFO Элемент ('xpath', '//*[@id="wasaby-content"]/div/div/div/div[2]/div[1]/div[1]/div[1]/div[2]/ul/li[2]/div/div[2]/a[2]') найден
+= 2025-03-26 01:33:49 INFO Клик по кнопке ссылка офисы в регине
+= 2025-03-26 01:33:49 INFO Элемент ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span') найден
+= 2025-03-26 01:33:49 INFO Получаем текст Нижегородская обл. из элемента ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span')
+= 2025-03-26 01:34:00 ERROR Элемент ('class name', 'controls-ListView__itemContent  controls-ListView__item_default-topPadding_null controls-ListView__item_default-bottomPadding_null controls-ListView__item-rightPadding_null controls-Tree__itemContent') не найден
+Traceback (most recent call last):
+  File "d:\Tensor\BaseApp.py", line 32, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Не удается найти элемент ('class name', 'controls-ListView__itemContent  controls-ListView__item_default-topPadding_null controls-ListView__item_default-bottomPadding_null controls-ListView__item-rightPadding_null controls-Tree__itemContent')
+Stacktrace:
+	GetHandleVerifier [0x00007FF72D1FFE65+26629]
+	(No symbol) [0x00007FF72D166030]
+	(No symbol) [0x00007FF72CFF931A]
+	(No symbol) [0x00007FF72D04F8E7]
+	(No symbol) [0x00007FF72D04FB1C]
+	(No symbol) [0x00007FF72D0A34A7]
+	(No symbol) [0x00007FF72D077AEF]
+	(No symbol) [0x00007FF72D0A0169]
+	(No symbol) [0x00007FF72D077883]
+	(No symbol) [0x00007FF72D040550]
+	(No symbol) [0x00007FF72D041803]
+	GetHandleVerifier [0x00007FF72D5572DD+3529853]
+	GetHandleVerifier [0x00007FF72D56DA42+3621858]
+	GetHandleVerifier [0x00007FF72D5624F3+3575443]
+	GetHandleVerifier [0x00007FF72D2CB79A+860474]
+	(No symbol) [0x00007FF72D1708AF]
+	(No symbol) [0x00007FF72D16CBE4]
+	(No symbol) [0x00007FF72D16CD86]
+	(No symbol) [0x00007FF72D15C2E9]
+	BaseThreadInitThunk [0x00007FFF731CE8D7+23]
+	RtlUserThreadStart [0x00007FFF74FFBF6C+44]
+
+= 2025-03-26 01:34:00 INFO Список партнеров НО None
+= 2025-03-26 01:34:00 INFO Элемент ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span') найден
+= 2025-03-26 01:34:00 INFO Клик по кнопке ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span')
+= 2025-03-26 01:34:00 INFO Элемент ('xpath', '//*[@id="popup"]/div[2]/div/div/div/div/div[2]/div/ul/li[43]/span') найден
+= 2025-03-26 01:34:00 INFO Клик по кнопке Камчатка
+= 2025-03-26 01:34:10 INFO Элемент ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span') найден
+= 2025-03-26 01:34:10 INFO Получаем текст Камчатский край из элемента ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span')
+= 2025-03-26 01:34:21 ERROR Элемент ('class name', 'controls-ListView__itemContent  controls-ListView__item_default-topPadding_null controls-ListView__item_default-bottomPadding_null controls-ListView__item-rightPadding_null controls-Tree__itemContent') не найден
+Traceback (most recent call last):
+  File "d:\Tensor\BaseApp.py", line 32, in find_element
+    element = WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\selenium\webdriver\support\wait.py", line 95, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: Не удается найти элемент ('class name', 'controls-ListView__itemContent  controls-ListView__item_default-topPadding_null controls-ListView__item_default-bottomPadding_null controls-ListView__item-rightPadding_null controls-Tree__itemContent')
+Stacktrace:
+	GetHandleVerifier [0x00007FF72D1FFE65+26629]
+	(No symbol) [0x00007FF72D166030]
+	(No symbol) [0x00007FF72CFF931A]
+	(No symbol) [0x00007FF72D04F8E7]
+	(No symbol) [0x00007FF72D04FB1C]
+	(No symbol) [0x00007FF72D0A34A7]
+	(No symbol) [0x00007FF72D077AEF]
+	(No symbol) [0x00007FF72D0A0169]
+	(No symbol) [0x00007FF72D077883]
+	(No symbol) [0x00007FF72D040550]
+	(No symbol) [0x00007FF72D041803]
+	GetHandleVerifier [0x00007FF72D5572DD+3529853]
+	GetHandleVerifier [0x00007FF72D56DA42+3621858]
+	GetHandleVerifier [0x00007FF72D5624F3+3575443]
+	GetHandleVerifier [0x00007FF72D2CB79A+860474]
+	(No symbol) [0x00007FF72D1708AF]
+	(No symbol) [0x00007FF72D16CBE4]
+	(No symbol) [0x00007FF72D16CD86]
+	(No symbol) [0x00007FF72D15C2E9]
+	BaseThreadInitThunk [0x00007FFF731CE8D7+23]
+	RtlUserThreadStart [0x00007FFF74FFBF6C+44]
+
+= 2025-03-26 01:34:21 INFO Список партнеров КК None
