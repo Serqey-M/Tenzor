@@ -1,16 +1,7 @@
-= 2025-03-26 14:56:20 INFO Сценарий 2 запущен
-= 2025-03-26 14:56:23 INFO Открытие страницы https://sbis.ru/
-= 2025-03-26 14:56:23 INFO Элемент ('xpath', '//*[@id="wasaby-content"]/div/div/div/div[2]/div[1]/div[1]/div[1]/div[2]/ul/li[2]/div') найден
-= 2025-03-26 14:56:23 INFO Клик по кнопке ссылка контакты
-= 2025-03-26 14:56:24 INFO Элемент ('xpath', '//*[@id="wasaby-content"]/div/div/div/div[2]/div[1]/div[1]/div[1]/div[2]/ul/li[2]/div/div[2]/a[2]') найден
-= 2025-03-26 14:56:24 INFO Клик по кнопке ссылка офисы в регине
-= 2025-03-26 14:56:24 INFO Элемент ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span') найден
-= 2025-03-26 14:56:24 INFO Получаем текст Новосибирская обл. из элемента Название региона
-= 2025-03-26 14:56:25 INFO Элементы в Cписок контактов найдены
-= 2025-03-26 14:56:25 INFO Список партнеров НО [<selenium.webdriver.remote.webelement.WebElement (session="fefc614f29a1e9a3bbb635a577d22c5d", element="f.B166EFDCBF3244B3FCB5760C299483DC.d.FD68C7DFBDFEF24496840D0DE3E10981.e.51")>]
-= 2025-03-26 14:56:25 INFO Элемент ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span') найден
-= 2025-03-26 14:56:25 INFO Клик по кнопке Название региона
-= 2025-03-26 14:56:25 INFO Элемент ('xpath', '//*[@id="popup"]/div[2]/div/div/div/div/div[2]/div/ul/li[43]/span') найден
-= 2025-03-26 14:56:25 INFO Клик по кнопке Камчатка
-= 2025-03-26 14:56:35 INFO Элемент ('xpath', '//*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span') найден
-= 2025-03-26 14:56:35 INFO Получаем текст Камчатский край из элемента Название региона
+= 2025-03-27 01:03:40 INFO Сценарий 3 запущен
+= 2025-03-27 01:03:43 INFO Открытие страницы https://sbis.ru/
+= 2025-03-27 01:03:43 INFO Элемент "Скачать локальные версии" найден
+= 2025-03-27 01:03:43 INFO Клик по кнопке "Скачать локальные версии"
+= 2025-03-27 01:03:54 INFO Получен url страницы https://saby.ru/download?tab=plugin&innerTab=default
+= 2025-03-27 01:03:54 INFO https://saby.ru/download?tab=plugin&innerTab=default
+= 2025-03-27 01:03:54 INFO Получен список вкладок

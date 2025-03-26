@@ -16,7 +16,7 @@ class Locators:
 
 class OperationsHelper(BasePage):
 
-      # клик
+    # клик
 
     def click_link_contacts(self):
         self.click_button(
@@ -46,6 +46,14 @@ class OperationsHelper(BasePage):
 
     def click_Kamchatka(self):
         self.click_button(Locators.ids["LOCATOR_KAMCHATKA"], description='Камчатка')
+
+    def click_download_local_versions(self):
+        self.click_button(
+            Locators.ids["LOCATOR_DOWNLOAD_LOCAL_VERSIONS"],
+            description="Скачать локальные версии")
+
+    def click_download(self):
+        self.click_button(Locators.ids["LOCATOR_DOWNLOAD"], description="Скачать")
 
     # получить
     def get_name_block_strength_in_people(self):
@@ -77,6 +85,6 @@ class OperationsHelper(BasePage):
 
     def get_name_region(self):
         return self.get_text_from_element(Locators.ids["LOCATOR_REGION"], description='Название региона')
-    
-    def get_contacts_list(self):
-        return self.find_elements(Locators.ids['LOCATOR_CONTACT_LIST'], description= 'Cписок контактов')
+
+    def get_list_partners(self):
+        return self.find_elements(Locators.ids["LOCATOR_PARTNER"], description='Партнеры')
