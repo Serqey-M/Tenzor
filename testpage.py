@@ -16,11 +16,7 @@ class Locators:
 
 class OperationsHelper(BasePage):
 
-    # Ввод текста
-    # def enter_login(self, word):
-    #     self.enter_terxt_into_field(TestSearchLocators.ids['LOCATOR_LOGIN_FIELD'], word, description = 'login form')
-
-    # клик
+      # клик
 
     def click_link_contacts(self):
         self.click_button(
@@ -46,41 +42,41 @@ class OperationsHelper(BasePage):
             description="ссылка 'подроднее' в блоке 'Сила в людях'")
 
     def click_name_region(self):
-        self.click_button(Locators.ids['LOCATOR_REGION'])
+        self.click_button(Locators.ids['LOCATOR_REGION'], description='Название региона')
 
     def click_Kamchatka(self):
         self.click_button(Locators.ids["LOCATOR_KAMCHATKA"], description='Камчатка')
 
     # получить
     def get_name_block_strength_in_people(self):
-        return self.get_text_from_element(Locators.ids["LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE"])
+        return self.get_text_from_element(Locators.ids["LOCATOR_NAME_BLOCK_STRENGTH_IN_PEOPLE"], description='Название блока "Сила в людях"')
 
     def get_height_img1(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG1"], 'height')
+        return self.get_element_property(Locators.ids["LOCATOR_IMG1"], 'height', description='Изображение 1')
 
     def get_width_img1(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG1"], "width")
+        return self.get_element_property(Locators.ids["LOCATOR_IMG1"], "width", description='Изображение 1')
 
     def get_height_img2(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG2"], "height")
+        return self.get_element_property(Locators.ids["LOCATOR_IMG2"], "height", description='Изображение 2')
 
     def get_width_img2(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG2"], "width")
+        return self.get_element_property(Locators.ids["LOCATOR_IMG2"], "width", description='Изображение 2')
 
     def get_height_img3(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG3"], "height")
+        return self.get_element_property(Locators.ids["LOCATOR_IMG3"], "height", description='Изображение 3')
 
     def get_width_img3(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG3"], "width")
+        return self.get_element_property(Locators.ids["LOCATOR_IMG3"], "width", description='Изображение 3')
 
     def get_height_img4(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG4"], "height")
+        return self.get_element_property(Locators.ids["LOCATOR_IMG4"], "height", description='Изображение 4')
 
     def get_width_img4(self):
-        return self.get_element_property(Locators.ids["LOCATOR_IMG4"], "width")
+        return self.get_element_property(Locators.ids["LOCATOR_IMG4"], "width", description='Изображение 4')
 
     def get_name_region(self):
-        return self.get_text_from_element(Locators.ids["LOCATOR_REGION"])
-
-    def get_list_of_partners(self):
-        return self.find_element(Locators.ids['LOCATOR_LIST_OF_PARTNERS'])
+        return self.get_text_from_element(Locators.ids["LOCATOR_REGION"], description='Название региона')
+    
+    def get_contacts_list(self):
+        return self.find_elements(Locators.ids['LOCATOR_CONTACT_LIST'], description= 'Cписок контактов')

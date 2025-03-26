@@ -9,7 +9,7 @@ XPATH:
   LOCATOR_IMG3: //*[@id="container"]/div[1]/div/div[4]/div[2]/div[3]/a/div[1]/img
   LOCATOR_IMG4: //*[@id="container"]/div[1]/div/div[4]/div[2]/div[4]/a/div[1]/img
   LOCATOR_REGION: //*[@id="container"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/span/span
-  # LOCATOR_LIST_OF_PARTNERS: //*[@id="contacts_list"]
+  LOCATOR_CONTACT_LIST: //*[@id="contacts_list"]
   LOCATOR_KAMCHATKA: //*[@id="popup"]/div[2]/div/div/div/div/div[2]/div/ul/li[43]/span
 CLASS_NAME:
-  LOCATOR_LIST_OF_PARTNERS: controls-ListView__itemContent  controls-ListView__item_default-topPadding_null controls-ListView__item_default-bottomPadding_null controls-ListView__item-rightPadding_null controls-Tree__itemContent 
+  LOCATOR_: 

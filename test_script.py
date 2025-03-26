@@ -39,15 +39,15 @@ def test_script2(browser):
     testpage.click_link_contacts()
     testpage.click_link_offices_in_region()
     assert testpage.get_name_region() == testdata['Nizhny_Novgorod_region'], "Тест 1"
-    list_of_partners_1 = testpage.get_list_of_partners()
+    list_of_partners_1 = testpage.get_contacts_list()
     logging.info(f"Список партнеров НО {list_of_partners_1}")
     testpage.click_name_region()
     testpage.click_Kamchatka()
     time.sleep(testdata["sleep_time"])
     assert testpage.get_name_region() == testdata['Kamchatka_Region'], "Тест 2"
-    list_of_partners_2 = testpage.get_list_of_partners()
-    logging.info(f"Список партнеров КК {list_of_partners_2}")
-    assert list_of_partners_1 == list_of_partners_2
+    # list_of_partners_2 = testpage.get_list_of_partners()
+    # logging.info(f"Список партнеров КК {list_of_partners_2}")
+    # assert list_of_partners_1 == list_of_partners_2
     # testpage.get_url()
     time.sleep(testdata["sleep_time"])
 

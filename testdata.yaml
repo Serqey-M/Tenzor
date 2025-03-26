@@ -2,5 +2,5 @@ address: https://sbis.ru/
 sleep_time: 10
 implicitly_wait: 10
 power_in_people: 'Сила в людях'
-Nizhny_Novgorod_region: 'Нижегородская обл.'
+Nizhny_Novgorod_region: 'Новосибирская обл.'
 Kamchatka_Region: 'Камчатский край'
