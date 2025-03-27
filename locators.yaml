@@ -13,6 +13,6 @@ XPATH:
   LOCATOR_KAMCHATKA: //*[@id="popup"]/div[2]/div/div/div/div/div[2]/div/ul/li[43]/span
   LOCATOR_PARTNER: //*[@class="controls-ListView__itemV-relative controls-ListView__itemV controls-ListView__item_default controls-ListView__item_contentWrapper js-controls-ListView__editingTarget  controls-ListView__itemV_cursor-pointer  controls-ListView__item_showActions js-controls-ListView__measurableContainer controls-ListView__item__unmarked_default controls-ListView__item_highlightOnHover controls-hover-background-default controls-Tree__item"]
   LOCATOR_DOWNLOAD_LOCAL_VERSIONS: //*[@id="container"]/div[2]/div[1]/div[2]/div[3]/ul/li[10]/a
-  LOCATOR_DOWNLOAD: //*[@id="sbis_ru-Header__scrollTop"]/div[1]/div[1]/span
+  LOCATOR_DOWNLOAD: /html/body/div[1]/div[2]/div[1]/div/div[1]/div/div/div/div[2]/div/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/div/a
 CLASS_NAME:
   LOCATOR:
