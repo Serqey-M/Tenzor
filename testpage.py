@@ -88,3 +88,6 @@ class OperationsHelper(BasePage):
 
     def get_list_partners(self):
         return self.find_elements(Locators.ids["LOCATOR_PARTNER"], description='Партнеры')
+
+    def get_size_of_uploaded_file(self):
+        return float(self.get_text_from_element(Locators.ids["LOCATOR_DOWNLOAD"], description="Скачать")[12:18:])

@@ -52,9 +52,12 @@ with open("testdata.yaml", encoding="utf-8") as f:
         logging.info("Сценарий 3 запущен")
         testpage = OperationsHelper(browser)
         testpage.go_to_site()
+        time.sleep(testdata["sleep_time"])
         testpage.click_download_local_versions()
         testpage.click_download()
         time.sleep(testdata["sleep_time"])
+        assert testpage.is_file_downloaded(testdata["name_of_downloaded_file"]) == True, 'Тест 1'
+        assert testpage.file_size(testdata["name_of_downloaded_file"]) == testpage.get_size_of_uploaded_file(), 'Тест 2'
 
 
 if __name__ == "__main__":

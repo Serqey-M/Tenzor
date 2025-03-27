@@ -1,4 +1,6 @@
 import logging
+import os
+import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import yaml
@@ -137,10 +139,19 @@ class BasePage:
             title = None
         return title
 
-    # Получение списка вкладок
-    def get_list_tabs(self, description=None):
-        try:
-            self.driver.window_handles
-            logging.info('Получен список вкладок')
-        except:
-            logging.exception("Не получен список вкладок")
+    # Проверка загрузки файлов
+    def is_file_downloaded(self, filename, directory=''):
+        if os.path.isfile(f'{directory}/{filename}'):
+            logging.info(f'Файл "{filename}" успешно загружен')
+            return True
+        else:
+            logging.info(f'Файл "{filename}" не загружен')
+            return False
+
+    # Размер файла
+    def file_size(self, filename, directory=''):
+        file_size = round(os.path.getsize(f'{directory}/{filename}')/1048576, 2)
+        logging.info(
+            f'Размер загруженого фала "{filename}" {file_size} Мб'
+        )
+        return file_size

@@ -1,9 +1,11 @@
 address: https://sbis.ru/
-sleep_time: 10
+sleep_time: 5
 implicitly_wait: 10
+max_download_time: 60
 power_in_people: 'Сила в людях'
 Nizhny_Novgorod_region: 'Нижегородская обл.'
 Kamchatka_Region: 'Камчатский край'
 url_Kamchatka: https://saby.ru/contacts/41-kamchatskij-kraj?tab=clients
 title_Kamchatka: Saby Контакты — Камчатский край
+name_of_downloaded_file: sbisplugin-setup-web.exe
 
